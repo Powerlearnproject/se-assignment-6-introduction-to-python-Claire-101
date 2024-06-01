@@ -1,0 +1,238 @@
+1 - Python is an open source high level programming language with the following feautures;
+    Easy syntax - Python syntax resembles natural english that allows developers to write read and debug code efficiently.
+    Rich Library - python library has built in modules that do varioud tasks and cover diverse domains.
+    Free & opensource - the large and extensive community develops and improve the language over time.
+Use cases where python is used in the real world by developer.
+    Web-development - Frameworks like Django and Flask allow developers to create robust web applications.
+    Data Analysis and Data Science - Python is the go-to language for data analysis, manipulation, and visualization.
+
+2. Python - installation on windows.
+        Using the Microsoft Store:
+Open the Microsoft Store and search for “Python.”
+Choose the newest version and install it.
+This method handles updates automatically and allows easy uninstallation.
+
+        Verifying the Installation:
+Open a terminal or command prompt and type $ python --version
+
+        Setting Up a Virtual Environment:
+Install virtualenv ( not already installed) - $ pip install virtualenv
+Activate the Virtual Environment:  (on windows) - $ venv\Scripts\activate
+Deactivate the Virtual Environment - $ deactivate
+
+3. A simple Python program that prints “Hello, World!” to the console:
+      print("Hello, World!")
+    Break down of the syntax: 
+       > print() Function - displays output.
+       >  String: "Hello, World!" is a string literal enclosed in double quotes
+
+4. Data Types and Variables:
+      >  Integer (int):  Represents whole numbers (positive, negative, or zero).
+      >  Floating-Point Number (float): Represents decimal numbers.  Eg: 3.14, -0.5, 2.718
+      >  Boolean (bool): Represents either True or False. Used for logical operations.  Example: True, False
+    
+ Example script:
+    # Creating variables of different data types
+            my_integer = 42
+            my_float = 3.14
+            my_string = "Hello, Python!"
+            my_boolean = True
+            my_list = [1, 2, 3, 4]
+            my_tuple = ('apple', 'banana', 'cherry')
+            my_dict = {'name': 'Alice', 'age': 30}
+            
+            # Printing the values
+            print("Integer:", my_integer)
+            print("Float:", my_float)
+            print("String:", my_string)
+            print("Boolean:", my_boolean)
+            print("List:", my_list)
+            print("Tuple:", my_tuple)
+            print("Dictionary:", my_dict)
+
+            # Accessing elements in a list
+            print("First item in the list:", my_list[0])
+            print("Second item in the tuple:", my_tuple[1])
+            print("Age from the dictionary:", my_dict['age'])
+
+5 . Conditional statements allow you to execute different code blocks based on certain conditions.Example if-else statements
+  
+            # Example: Checking if a number is positive or negative
+          number = float(input("Enter a number: "))
+          
+          if number > 0:
+              print("The number is positive.")
+          elif number < 0:
+              print("The number is negative.")
+          else:
+              print("The number is zero.")
+
+      Loops allow you to repeat a block of code multiple times. Two common types of loops in Python are for loops and while loops.
+            Example.
+          # Example: Printing numbers from 1 to 5
+            for i in range(1, 6):
+                print(i)
+
+
+6.  Python are reusable blocks of code that perform specific tasks. They allow you to organize your code, make it more modular, and avoid repetition.  
+    Here is why they are useful:
+        > Functions break down complex tasks into smaller, manageable parts.
+        >  Functions make your code more readable by encapsulating logic and providing descriptive names.
+        >  Code Reusability
+
+    simple Python function that takes two arguments and returns their sum
+
+            def add_numbers(a, b):
+          """
+          Adds two numbers and returns the result.
+          """
+          return a + b
+      
+          # Example usage:
+          num1 = 10
+          num2 = 20
+          result = add_numbers(num1, num2)
+          print(f"The sum of {num1} and {num2} is {result}.")
+
+7.   Lists vs. Dictionaries:
+    Lists (list):
+        Ordered collection of items.
+        Elements are indexed by integers (starting from 0).
+        Elements can be of any data type (numbers, strings, other lists, etc.).
+        Syntax: [item1, item2, ...
+                
+    Dictionaries (dict):
+        Unordered collection of key-value pairs.
+        Elements are accessed by keys (which can be strings, numbers, or other hashable types).
+        Useful for associating values with specific labels.
+        Syntax: {key1: value1, key2: value2, ...}
+
+                    # Create a list of numbers
+            my_list = [10, 20, 30, 40, 50]
+            
+            # Create a dictionary with key-value pairs
+            my_dict = {
+                'name': 'Alice',
+                'age': 25,
+                'city': 'Wonderland'
+            }
+            
+            # Accessing elements:
+            print("List element at index 2:", my_list[2])
+            print("Value associated with 'age':", my_dict['age'])
+            
+            # Modifying elements:
+            my_list[3] = 42
+            my_dict['city'] = 'New Wonderland'
+            
+            # Adding new elements:
+            my_list.append(60)
+            my_dict['gender'] = 'Female'
+            
+            # Length of the list and dictionary:
+            print("Length of the list:", len(my_list))
+            print("Number of key-value pairs in the dictionary:", len(my_dict))
+            
+            # Iterating through the list:
+            print("List elements:")
+            for num in my_list:
+                print(num)
+            
+            # Iterating through the dictionary:
+            print("Dictionary key-value pairs:")
+            for key, value in my_dict.items():
+                print(f"{key}: {value}")
+
+8.  Exception handling in Python allows you to handle errors or exceptional situations that may occur during program execution. 
+Instead of crashing the program, you can catch and manage these exceptions.
+    > try Block:    The try block contains the code that might raise an exception
+    > except Block: The except block specifies what to do when a specific exception occurs
+    > finally Block: The finally block is executed regardless of whether an exception occurred or not.
+
+          def divide(a, b):
+        try:
+            result = a / b
+        except ZeroDivisionError:
+            print("Error: Division by zero!")
+            result = None
+        finally:
+            print("Cleanup: Closing resources if any.")
+        return result
+
+        # Example usage:
+        num1 = 10
+        num2 = 0
+        
+        result = divide(num1, num2)
+        if result is not None:
+            print(f"Result of {num1} / {num2} = {result}")
+        else:
+            print("Cannot compute the result due to an error.")
+
+9.    Modules:
+  A module is a single file containing Python code.
+  It can include functions, classes, and variables.
+  Modules allow you to organize code and reuse it across different programs
+
+       Packages:
+A package is a collection of related modules grouped together in a directory.
+Packages allow you to organize code hierarchically.
+A package must contain an __init__.py file (can be empty) to be recognized as a package.
+
+      example using the math module.
+                 
+  import math
+      # Calculate the square root
+      number = 25
+      sqrt_result = math.sqrt(number)
+      print(f"Square root of {number} is {sqrt_result:.2f}")
+      
+      # Calculate the value of pi
+      print(f"Value of pi: {math.pi:.4f}")
+
+10.  To read the content of a file, you can follow these steps:
+                >  Reading the file
+    Open the File:
+Use the open() function to open a file in read mode ('r').
+Provide the file path as an argument.
+                 
+    Read the Content:
+Use methods like read(), readline(), or readlines() to read the content.
+read() reads the entire file as a single string.
+readline() reads one line at a time.
+readlines() reads all lines and returns a list of strings.
+                 
+    Close the File:
+Always close the file using the close() method to free up system resources.
+
+  Example;
+    # Read from the file
+file_path = "sample.txt"
+with open(file_path, 'r') as file:
+    content = file.read()
+
+# Print the content
+print(content)
+
+          > Writing to a File:
+To write to a file, follow these steps:
+    Open the File:
+Use the open() function in write mode ('w').
+If the file doesn’t exist, it will be created.
+                 
+    Write Content:
+Use the write() method to add content to the file.
+You can write strings or use a loop to write multiple lines.
+                 
+    Close the File:
+Always close the file after writing.
+
+
+
+
+
+
+
+
+
+
